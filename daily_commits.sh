@@ -20,11 +20,11 @@ git commit $file -m "{$m1}"
 
 echo Congratulations you have "done" your daily commits
 
-done
+read -p "Continue (y/n)?" choice
+case "$choice" in 
+  y|Y ) ;;
+  n|N ) exit ;;
+  * ) echo "invalid";;
+esac
 
-read -p "Continue (y/n)?" CONT
-if [ "$CONT" = "y" ]; then
-  
-else
-  exit;
-fi
+done
