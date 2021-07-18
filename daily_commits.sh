@@ -21,3 +21,10 @@ git commit $file -m "{$m1}"
 echo Congratulations you have "done" your daily commits
 
 done
+
+read -p "Continue (y/n)?" CONT
+if [ "$CONT" = "y" ]; then
+  
+else
+  exit;
+fi
