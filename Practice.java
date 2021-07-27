@@ -1,4 +1,7 @@
 package com.company;
+
+import java.util.Scanner;
+
 /*
 Challenge 1 - Conditionals: Leap Year
   Method Name: isLeapYear
@@ -24,11 +27,13 @@ examples:
 */
 public class Practice {
 
+
+
     static boolean isLeapYear(Integer year) {
 
         boolean leap = false;
 
-        if (year % 4 == 0 && year % 100 == 0 && year % 400 == 0) {
+        if (year % 4 == 0 || year % 100 == 0 || year % 400 == 0) {
 
           return true;
         }
@@ -54,8 +59,20 @@ public class Practice {
 
     public static void main(String[] arg){
 
-      System.out.println (isLeapYear ( 2000 ));
+        Scanner input = new
+                Scanner (System.in);
 
-      System.out.println (fib ( 10 ));
+        //leap
+
+        System.out.print ( "Please enter a year " );
+        int year = input.nextInt ();
+        System.out.println (isLeapYear ( year ));
+
+        //fib
+
+        System.out.print ( "Please enter a number " );
+        int number = input.nextInt ();
+        System.out.println (fib (number));
+
     }
 }
