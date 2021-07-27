@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class Factoring {
 
     static Integer factoring(Integer num){
@@ -15,7 +17,11 @@ public class Factoring {
     }
     public static void main(String[] arg){
 
-        System.out.println (factoring ( 5 ));
+        Scanner input = new
+                Scanner ( System.in );
+
+        System.out.print ( "Please enter a number to factor " );
+        int number = input.nextInt ();
+        System.out.println (factoring ( number ));
 
     }
-}
