@@ -1,6 +1,8 @@
 package com.company;
 
 
+import java.util.Scanner;
+
 //Longest String
 public class Main {
 
@@ -18,13 +20,17 @@ public class Main {
             }
         }
 
+        String word = "\"%s\" has letters in it %s".formatted ( bigWord,bigWord.length () );
 
-        return bigWord;
+        return word;
     }
 
 
     public static void main(String[] args) {
 
-        System.out.println (longStr ( "Hi world" ));
+        Scanner sentence = new
+                Scanner ( System.in );
+        System.out.print ( "Please write a sentence " );
+        System.out.println (longStr (sentence.next()));
     }
 }
